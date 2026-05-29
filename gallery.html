@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Ved Garbh Sanskar</title>
+    <meta name="description" content="View our gallery to see our serene wellness center and happy families.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .masonry-grid {
+            column-count: 3;
+            column-gap: 1.5rem;
+        }
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 1.5rem;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+        }
+        .masonry-item img {
+            width: 100%;
+            display: block;
+            transition: var(--transition-smooth);
+        }
+        .masonry-item:hover img {
+            transform: scale(1.05);
+        }
+        @media (max-width: 768px) {
+            .masonry-grid { column-count: 2; }
+        }
+        @media (max-width: 480px) {
+            .masonry-grid { column-count: 1; }
+        }
+        
+        .gallery-nav {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo">
+                <img src="logo.png" alt="Ved Garbh Sanskar Logo">
+            </a>
+            <nav class="nav-links">
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="gallery.html" style="color:var(--clr-primary)">Gallery</a>
+                <a href="testimonials.html">Testimonials</a>
+                <a href="contact.html" class="btn btn-primary">Contact Us</a>
+            </nav>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <main style="padding-top: 120px; padding-bottom: 80px;">
+        <div class="container">
+            <div class="section-header text-center fade-up">
+                <span class="section-subtitle">Our Spaces & Moments</span>
+                <h1>Photo Gallery</h1>
+            </div>
+
+            <div class="gallery-nav fade-up">
+                <a href="gallery.html" class="btn btn-primary">General</a>
+                <a href="kids-gallery.html" class="btn btn-outline">Kids Gallery</a>
+                <a href="videos.html" class="btn btn-outline">Videos</a>
+            </div>
+
+            <div class="masonry-grid fade-up delay-1">
+                <div class="masonry-item"><img src="https://images.unsplash.com/photo-1518481612222-68bbe828ecd1?w=500&h=700&fit=crop" alt="Gallery image"></div>
+                <div class="masonry-item"><img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=500&h=500&fit=crop" alt="Gallery image"></div>
+                <div class="masonry-item"><img src="https://images.unsplash.com/photo-1594824436998-0522c077b282?w=500&h=800&fit=crop" alt="Gallery image"></div>
+                <div class="masonry-item"><img src="https://images.unsplash.com/photo-1512438248247-f0f2a5a8b7f0?w=500&h=400&fit=crop" alt="Gallery image"></div>
+                <div class="masonry-item"><img src="https://images.unsplash.com/photo-1522845015757-50bce044e5da?w=500&h=600&fit=crop" alt="Gallery image"></div>
+                <div class="masonry-item"><img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=500&h=500&fit=crop" alt="Gallery image"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="logo.png" alt="Ved Garbh Sanskar Logo" class="footer-logo">
+                    <p>Elevating the motherhood experience with the perfect blend of Ayurveda and modern care.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Explore</h4>
+                    <a href="about.html">About Us</a>
+                    <a href="services.html">Our Services</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="testimonials.html">Testimonials</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p>Ahmedabad, Gujarat</p>
+                    <p>info@vedgarbhsanskar.com</p>
+                    <p>+91 98765 43210</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ved Garbh Sanskar. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
