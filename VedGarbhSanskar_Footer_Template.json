@@ -1,0 +1,25 @@
+{
+  "title": "Ved Garbh Sanskar Footer",
+  "type": "section",
+  "version": "0.4",
+  "page_settings": [],
+  "content": [
+    {
+      "id": "footer_main",
+      "elType": "container",
+      "settings": {
+        "background_background": "classic",
+        "background_color": "#002B3A",
+        "padding": {
+          "unit": "px",
+          "top": "100",
+          "right": "80",
+          "bottom": "50",
+          "left": "80",
+          "isLinked": false
+        }
+      },
+      "elements": []
+    }
+  ]
+}

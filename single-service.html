@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service | Ved Garbh Sanskar</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta property="og:title" content="Service | Ved Garbh Sanskar">
+    <meta property="og:description" content="Experience premium Ayurvedic prenatal wellness. A serene, trustworthy, and modern approach to motherhood and pregnancy care.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vedgarbhsanskar.com/single-service.html">
+    <meta property="og:image" content="https://vedgarbhsanskar.com/logo_svg.svg">
+    <link rel="canonical" href="https://vedgarbhsanskar.com/single-service.html" />
+
+    <meta name="description" content="Discover our premium Ayurvedic maternity wellness services at Ved Garbh Sanskar.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .service-hero {
+            padding: 8rem 0 4rem;
+            background: linear-gradient(to bottom, rgba(247, 243, 235, 1) 0%, rgba(247, 243, 235, 0) 100%);
+        }
+        .service-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+            margin-top: 4rem;
+        }
+        .service-main-text h2 {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: var(--clr-primary);
+        }
+        .service-main-text ul {
+            list-style-type: disc;
+            margin-left: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .service-main-text li {
+            margin-bottom: 0.5rem;
+            color: var(--clr-text-light);
+        }
+        .service-sidebar {
+            background: var(--clr-white);
+            padding: 2rem;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-soft);
+            height: fit-content;
+            position: sticky;
+            top: 100px;
+        }
+        @media (max-width: 992px) {
+            .service-content { grid-template-columns: 1fr; }
+            .service-sidebar { position: static; margin-top: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar" id="navbar"></header>
+
+    <main>
+        <section class="service-hero text-center fade-up">
+            <div class="container">
+                <span class="section-subtitle">Our Services</span>
+                <h1 id="service-title">Service Title</h1>
+                <p style="max-width: 600px; margin: 0 auto 2rem;" id="service-intro">Holistic care tailored for you.</p>
+                <div class="image-placeholder" style="width: 100%; height: 400px; border-radius: var(--radius-lg); margin-top: 2rem;">
+                    Service Featured Image
+                </div>
+            </div>
+        </section>
+
+        <section class="container" style="padding: 0 0 6rem 0;">
+            <div class="service-content">
+                <div class="service-main-text fade-up delay-1">
+                    <h2>Service Introduction</h2>
+                    <p>Welcome to our specialized service. At Ved Garbh Sanskar, we utilize authentic Ayurvedic principles combined with modern care to ensure the best outcomes for our families.</p>
+                    
+                    <h2>Benefits Section</h2>
+                    <ul>
+                        <li>Improves overall physical and mental well-being.</li>
+                        <li>Rooted in ancient Ayurvedic wisdom.</li>
+                        <li>Personalized care plans tailored to individual needs.</li>
+                        <li>Guided by experienced Ayurvedic doctors.</li>
+                    </ul>
+                    
+                    <h2>Why Choose This Service</h2>
+                    <p>Our approach goes beyond surface-level treatments, focusing on deep, holistic healing and preparation. We provide a sanctuary dedicated to profound spiritual, emotional, and physical wellness.</p>
+
+                    <h2>Process / Program Details</h2>
+                    <p>The program consists of detailed consultations, personalized regimens, continuous monitoring, and structured activities designed to nurture and empower you at every stage of the journey.</p>
+                </div>
+                
+                <div class="service-sidebar fade-up delay-2">
+                    <h3 style="margin-bottom: 1rem; color: var(--clr-primary);">Need Guidance?</h3>
+                    <p style="margin-bottom: 1.5rem; color: var(--clr-text-light);">Reach out to us to learn more about how this service can benefit you and your family.</p>
+                    <a href="contact.html" class="btn btn-primary" style="width: 100%; text-align: center;">Book Consultation</a>
+                    
+                    <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(0,0,0,0.05);">
+                        <h4 style="margin-bottom: 1rem;">Contact Info</h4>
+                        <p style="font-size: 0.9rem; margin-bottom: 0.5rem; color: var(--clr-text-light);"><strong>Phone:</strong> +91 9925222763</p>
+                        <p style="font-size: 0.9rem; color: var(--clr-text-light);"><strong>Email:</strong> vedgarbhsansakar@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer"></footer>
+    <script src="script.js"></script>
+</body>
+</html>

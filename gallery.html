@@ -4,64 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery | Ved Garbh Sanskar</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta property="og:title" content="Gallery | Ved Garbh Sanskar">
+    <meta property="og:description" content="Experience premium Ayurvedic prenatal wellness. A serene, trustworthy, and modern approach to motherhood and pregnancy care.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vedgarbhsanskar.com/gallery.html">
+    <meta property="og:image" content="https://vedgarbhsanskar.com/logo_svg.svg">
+    <link rel="canonical" href="https://vedgarbhsanskar.com/gallery.html" />
+
     <meta name="description" content="View our gallery to see our serene wellness center and happy families.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <style>
-        .masonry-grid {
-            column-count: 3;
-            column-gap: 1.5rem;
-        }
-        .masonry-item {
-            break-inside: avoid;
-            margin-bottom: 1.5rem;
-            border-radius: var(--radius-md);
-            overflow: hidden;
-            box-shadow: var(--shadow-soft);
-        }
-        .masonry-item img {
-            width: 100%;
-            display: block;
-            transition: var(--transition-smooth);
-        }
-        .masonry-item:hover img {
-            transform: scale(1.05);
-        }
-        @media (max-width: 768px) {
-            .masonry-grid { column-count: 2; }
-        }
-        @media (max-width: 480px) {
-            .masonry-grid { column-count: 1; }
-        }
-        
-        .gallery-nav {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-bottom: 3rem;
-        }
-    </style>
 </head>
 <body>
-    <header class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="brand-logo">
-                <img src="logo.png" alt="Ved Garbh Sanskar Logo">
-            </a>
-            <nav class="nav-links">
-                <a href="about.html">About</a>
-                <a href="services.html">Services</a>
-                <a href="gallery.html" style="color:var(--clr-primary)">Gallery</a>
-                <a href="testimonials.html">Testimonials</a>
-                <a href="contact.html" class="btn btn-primary">Contact Us</a>
-            </nav>
-            <button class="mobile-menu-btn" aria-label="Toggle menu">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
-    </header>
+    <header class="navbar" id="navbar"></header>
 
     <main style="padding-top: 120px; padding-bottom: 80px;">
         <div class="container">
@@ -70,50 +28,175 @@
                 <h1>Photo Gallery</h1>
             </div>
 
-            <div class="gallery-nav fade-up">
-                <a href="gallery.html" class="btn btn-primary">General</a>
-                <a href="kids-gallery.html" class="btn btn-outline">Kids Gallery</a>
-                <a href="videos.html" class="btn btn-outline">Videos</a>
+            <div class="gallery-nav fade-up" style="display: flex; justify-content: center; gap: 1rem; margin-bottom: 3rem;">
+                <button id="btn-photos" class="btn btn-primary" onclick="toggleGallery('photos')">Photos</button>
+                <button id="btn-videos" class="btn btn-outline" onclick="toggleGallery('videos')">Videos</button>
             </div>
 
-            <div class="masonry-grid fade-up delay-1">
-                <div class="masonry-item"><img src="https://images.unsplash.com/photo-1518481612222-68bbe828ecd1?w=500&h=700&fit=crop" alt="Gallery image"></div>
-                <div class="masonry-item"><img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=500&h=500&fit=crop" alt="Gallery image"></div>
-                <div class="masonry-item"><img src="https://images.unsplash.com/photo-1594824436998-0522c077b282?w=500&h=800&fit=crop" alt="Gallery image"></div>
-                <div class="masonry-item"><img src="https://images.unsplash.com/photo-1512438248247-f0f2a5a8b7f0?w=500&h=400&fit=crop" alt="Gallery image"></div>
-                <div class="masonry-item"><img src="https://images.unsplash.com/photo-1522845015757-50bce044e5da?w=500&h=600&fit=crop" alt="Gallery image"></div>
-                <div class="masonry-item"><img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=500&h=500&fit=crop" alt="Gallery image"></div>
+            <!-- Photos Section -->
+            <div id="photos-section" class="fade-up delay-1">
+                <div class="bento-grid">
+                    <!-- Add your local photo files here -->
+                    <div class="bento-item bento-large"><img src="img/IMG-20230505-WA0001.jpg" alt="Gallery Image" loading="lazy"></div>
+                    <div class="bento-item"><img src="img/IMG-20230530-WA0004.jpg" alt="Gallery Image" loading="lazy"></div>
+                    <div class="bento-item bento-row-2"><img src="img/IMG-20230622-WA0003.jpg" alt="Gallery Image" loading="lazy"></div>
+                    <div class="bento-item bento-span-2"><img src="img/IMG-20230630-WA0000.jpg" alt="Gallery Image" loading="lazy"></div>
+                    <div class="bento-item"><img src="img/IMG-20230722-WA0000.jpg" alt="Gallery Image" loading="lazy"></div>
+                    <div class="bento-item"><img src="img/IMG-20250724-WA0007.jpg" alt="Gallery Image" loading="lazy"></div>
+                    <div class="bento-item bento-span-2"><img src="img/IMG-20251105-WA0005.jpg" alt="Gallery Image" loading="lazy"></div>
+                    <div class="bento-item"><img src="img/IMG-20251105-WA0006.jpg" alt="Gallery Image" loading="lazy"></div>
+                    <div class="bento-item bento-large"><img src="img/IMG-20251105-WA0007.jpg" alt="Gallery Image" loading="lazy"></div>
+                    <div class="bento-item bento-row-2"><img src="img/IMG-20251105-WA0008.jpg" alt="Gallery Image" loading="lazy"></div>
+                    <div class="bento-item"><img src="img/IMG-20251105-WA0009.jpg" alt="Gallery Image" loading="lazy"></div>
+                    <div class="bento-item"><img src="img/IMG-20251105-WA0010.jpg" alt="Gallery Image" loading="lazy"></div>
+                    <div class="bento-item bento-span-2"><img src="img/IMG-20251105-WA0011.jpg" alt="Gallery Image" loading="lazy"></div>
+                    <div class="bento-item"><img src="img/IMG-20251105-WA0012.jpg" alt="Gallery Image" loading="lazy"></div>
+                    <div class="bento-item bento-large"><img src="img/IMG-20251105-WA0013.jpg" alt="Gallery Image" loading="lazy"></div>
+                    <div class="bento-item"><img src="img/IMG-20251105-WA0014.jpg" alt="Gallery Image" loading="lazy"></div>
+                    <div class="bento-item bento-row-2"><img src="img/IMG-20251105-WA0015.jpg" alt="Gallery Image" loading="lazy"></div>
+                    <div class="bento-item"><img src="img/IMG-20251105-WA0016.jpg" alt="Gallery Image" loading="lazy"></div>
+                    <div class="bento-item bento-span-2"><img src="img/IMG-20251105-WA0017.jpg" alt="Gallery Image" loading="lazy"></div>
+                    <div class="bento-item"><img src="img/IMG-20251105-WA0018.jpg" alt="Gallery Image" loading="lazy"></div>
+                    <div class="bento-item"><img src="img/IMG-20251105-WA0019.jpg" alt="Gallery Image" loading="lazy"></div>
+                    <div class="bento-item bento-span-2"><img src="img/IMG-20251105-WA0020.jpg" alt="Gallery Image" loading="lazy"></div>
+                    <div class="bento-item"><img src="img/IMG-20251105-WA0021.jpg" alt="Gallery Image" loading="lazy"></div>
+                    <div class="bento-item"><img src="img/IMG-20251105-WA0022.jpg" alt="Gallery Image" loading="lazy"></div>
+                </div>
+            </div>
+
+            <!-- Videos Section -->
+            <div id="videos-section" class="fade-up delay-1" style="display: none;">
+                <div class="video-grid video-grid-large">
+                    <!-- Videos will load here dynamically via script.js -->
+                </div>
             </div>
         </div>
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <img src="logo.png" alt="Ved Garbh Sanskar Logo" class="footer-logo">
-                    <p>Elevating the motherhood experience with the perfect blend of Ayurveda and modern care.</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Explore</h4>
-                    <a href="about.html">About Us</a>
-                    <a href="services.html">Our Services</a>
-                    <a href="gallery.html">Gallery</a>
-                    <a href="testimonials.html">Testimonials</a>
-                    <a href="contact.html">Contact</a>
-                </div>
-                <div class="footer-contact">
-                    <h4>Contact</h4>
-                    <p>Ahmedabad, Gujarat</p>
-                    <p>info@vedgarbhsanskar.com</p>
-                    <p>+91 98765 43210</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Ved Garbh Sanskar. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <footer class="footer"></footer>
     <script src="script.js"></script>
+    <script>
+        function toggleGallery(type) {
+            const photosSection = document.getElementById('photos-section');
+            const videosSection = document.getElementById('videos-section');
+            const btnPhotos = document.getElementById('btn-photos');
+            const btnVideos = document.getElementById('btn-videos');
+
+            if (type === 'photos') {
+                photosSection.style.display = 'block';
+                videosSection.style.display = 'none';
+                btnPhotos.classList.replace('btn-outline', 'btn-primary');
+                btnVideos.classList.replace('btn-primary', 'btn-outline');
+            } else {
+                photosSection.style.display = 'none';
+                videosSection.style.display = 'block';
+                btnVideos.classList.replace('btn-outline', 'btn-primary');
+                btnPhotos.classList.replace('btn-primary', 'btn-outline');
+            }
+        }
+
+        // Lightbox functionality
+        let currentImageIndex = 0;
+        const images = [];
+        
+        document.addEventListener("DOMContentLoaded", () => {
+            const bentoItems = document.querySelectorAll("#photos-section .bento-item img");
+            bentoItems.forEach((img, index) => {
+                images.push(img.src);
+                img.parentElement.onclick = () => openLightbox(index);
+            });
+            
+            // Close lightbox when clicking outside the image
+            document.getElementById("lightbox").addEventListener("click", function(e) {
+                if(e.target === this || e.target.classList.contains("lightbox-content-wrapper")) {
+                    closeLightbox();
+                }
+            });
+            
+            // Keyboard navigation
+            document.addEventListener("keydown", function(e) {
+                const lightbox = document.getElementById("lightbox");
+                if (lightbox.style.display === "block") {
+                    if (e.key === "Escape") closeLightbox();
+                    if (e.key === "ArrowLeft") changeImage(-1);
+                    if (e.key === "ArrowRight") changeImage(1);
+                }
+            });
+        });
+
+        function openLightbox(index) {
+            const lightbox = document.getElementById("lightbox");
+            const lightboxImg = document.getElementById("lightbox-img");
+            currentImageIndex = index;
+            
+            // Temporarily disable transition for instant src switch
+            lightboxImg.style.transition = "none";
+            lightboxImg.style.opacity = 0;
+            lightboxImg.style.transform = "scale(0.8)";
+            
+            lightboxImg.src = images[currentImageIndex];
+            lightbox.style.display = "block";
+            
+            // Force reflow
+            void lightbox.offsetWidth;
+            
+            // Restore transition and animate in
+            lightboxImg.style.transition = "transform 0.3s ease-in-out, opacity 0.3s ease-in-out";
+            lightbox.classList.add("show");
+            
+            // Allow image transition after src is loaded
+            lightboxImg.onload = function() {
+                lightboxImg.style.opacity = 1;
+                lightboxImg.style.transform = "scale(1)";
+            };
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById("lightbox");
+            const lightboxImg = document.getElementById("lightbox-img");
+            
+            lightbox.classList.remove("show");
+            lightboxImg.style.opacity = 0;
+            lightboxImg.style.transform = "scale(0.8)";
+            
+            setTimeout(() => {
+                lightbox.style.display = "none";
+            }, 300);
+        }
+
+        function changeImage(step) {
+            currentImageIndex += step;
+            if (currentImageIndex >= images.length) {
+                currentImageIndex = 0;
+            } else if (currentImageIndex < 0) {
+                currentImageIndex = images.length - 1;
+            }
+            
+            const lightboxImg = document.getElementById("lightbox-img");
+            
+            // Fade out
+            lightboxImg.style.opacity = 0;
+            lightboxImg.style.transform = "scale(0.95)";
+            
+            setTimeout(() => {
+                lightboxImg.src = images[currentImageIndex];
+                
+                lightboxImg.onload = function() {
+                    lightboxImg.style.opacity = 1;
+                    lightboxImg.style.transform = "scale(1)";
+                };
+            }, 200);
+        }
+    </script>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
+        <div class="lightbox-content-wrapper">
+            <button class="lightbox-prev" onclick="changeImage(-1)">&#10094;</button>
+            <img class="lightbox-content" id="lightbox-img" alt="Enlarged gallery image">
+            <button class="lightbox-next" onclick="changeImage(1)">&#10095;</button>
+        </div>
+    </div>
 </body>
 </html>

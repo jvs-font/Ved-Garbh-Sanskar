@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Layout Samples | Ved Garbh Sanskar</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .demo-title {
+            text-align: center;
+            padding: 150px 0 50px;
+            background: var(--clr-white);
+        }
+        .demo-section-title {
+            text-align: center;
+            padding: 4rem 2rem 1rem;
+            margin: 0;
+            background: var(--clr-primary);
+            color: var(--clr-white);
+            font-family: var(--font-serif);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+        }
+
+        /* 1. Floating Glassmorphism */
+        .layout-glass {
+            position: relative;
+            background: var(--clr-bg-light);
+            padding-bottom: 6rem;
+        }
+        .glass-hero-img {
+            width: 100%;
+            height: 70vh;
+            object-fit: cover;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            max-width: 900px;
+            margin: -20vh auto 0;
+            position: relative;
+            z-index: 10;
+            padding: 5rem 4rem;
+            border-radius: 20px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.08);
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.4);
+        }
+
+        /* 2. Editorial / Magazine Style */
+        .layout-editorial {
+            padding: 8rem 0;
+            background: var(--clr-white);
+        }
+        .editorial-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        .editorial-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        .editorial-img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            margin-bottom: 3rem;
+            filter: sepia(10%) contrast(110%);
+        }
+        .editorial-text {
+            column-count: 2;
+            column-gap: 4rem;
+            text-align: justify;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #444;
+        }
+        .drop-cap::first-letter {
+            float: left;
+            font-size: 6rem;
+            line-height: 0.7;
+            padding-right: 0.8rem;
+            padding-top: 0.2rem;
+            color: var(--clr-primary);
+            font-family: var(--font-serif);
+        }
+        
+        /* 3. Alternating Zig-Zag */
+        .layout-zigzag {
+            padding: 8rem 0;
+            background: #faf8f5;
+        }
+        .zigzag-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6rem;
+            align-items: center;
+            margin-bottom: 6rem;
+        }
+        .zigzag-row:last-child {
+            margin-bottom: 0;
+        }
+        .zigzag-row:nth-child(even) .zigzag-img-col {
+            order: 2;
+        }
+        .zigzag-row:nth-child(even) .zigzag-text-col {
+            order: 1;
+        }
+        .zigzag-img-col img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            border-radius: 2rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+        }
+
+        /* 4. Bento Box Split */
+        .layout-split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 90vh;
+        }
+        .split-text {
+            background: var(--clr-bg-light);
+            padding: 10%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .split-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media (max-width: 992px) {
+            .zigzag-row, .layout-split { grid-template-columns: 1fr; gap: 3rem; }
+            .zigzag-row:nth-child(even) .zigzag-img-col { order: -1; }
+            .editorial-text { column-count: 1; }
+            .split-text { padding: 4rem 2rem; }
+            .glass-card { margin: -10vh 1rem 0; padding: 3rem 2rem; }
+            .layout-split { min-height: auto; }
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar" id="navbar"></header>
+
+    <div class="demo-title container">
+        <h1>Service Page Layout Concepts</h1>
+        <p>Scroll down to see 4 different ways we could structure your service pages.</p>
+    </div>
+
+    <!-- 1. Floating Glassmorphism -->
+    <h2 class="demo-section-title">Concept 1: Floating Glassmorphism</h2>
+    <section class="layout-glass">
+        <img src="img/yoga-for-women.jpg" alt="Yoga" class="glass-hero-img">
+        <div class="glass-card fade-up">
+            <span class="section-subtitle">Holistic Wellness</span>
+            <h2 style="font-size: 3rem; margin-bottom: 1.5rem;">Yoga for Women</h2>
+            <p style="font-size: 1.1rem; color: #555; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Welcome to our specialized service. At Ved Garbh Sanskar, we utilize authentic Ayurvedic principles combined with modern care to ensure the best outcomes for our families.
+            </p>
+            <a href="https://forms.gle/6QUog8rSoJxaThwy7" target="_blank" class="btn btn-primary">Book Consultation</a>
+        </div>
+    </section>
+
+    <!-- 2. Editorial / Magazine Style -->
+    <h2 class="demo-section-title">Concept 2: Editorial / Magazine Style</h2>
+    <section class="layout-editorial">
+        <div class="editorial-container">
+            <div class="editorial-header fade-up">
+                <span class="section-subtitle">Ancient Wisdom</span>
+                <h2 style="font-size: 3.5rem;">Ayurvedic Consultation</h2>
+            </div>
+            <img src="img/Ayurvedi Consultation.png" alt="Consultation" class="editorial-img fade-up delay-1">
+            <div class="editorial-text fade-up delay-2">
+                <p class="drop-cap">O</p>
+                <p>ur approach goes beyond surface-level treatments, focusing on deep, holistic healing and preparation. We provide a sanctuary dedicated to profound spiritual, emotional, and physical wellness. The program consists of detailed consultations, personalized regimens, continuous monitoring, and structured activities designed to nurture and empower you at every stage of the journey.</p>
+                <p>Rooted in ancient Ayurvedic wisdom, we believe that every mother and child deserves care that is personalized, gentle, and profoundly effective. Our doctors spend time understanding your unique constitution (Prakriti) to tailor a plan just for you.</p>
+            </div>
+            <div style="text-align: center; margin-top: 4rem;">
+                <a href="https://forms.gle/6QUog8rSoJxaThwy7" target="_blank" class="btn btn-outline">Schedule Your Visit</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Alternating Zig-Zag -->
+    <h2 class="demo-section-title">Concept 3: Alternating Zig-Zag</h2>
+    <section class="layout-zigzag">
+        <div class="container">
+            <!-- Row 1 -->
+            <div class="zigzag-row">
+                <div class="zigzag-text-col fade-up">
+                    <span class="section-subtitle">Nurturing Growth</span>
+                    <h2>The Science of Garbh Sanskar</h2>
+                    <p>Garbh Sanskar translates to "education in the womb." It is a profound Ayurvedic science that focuses on the mental, physical, and spiritual development of the child during pregnancy.</p>
+                    <a href="https://forms.gle/6QUog8rSoJxaThwy7" target="_blank" class="btn btn-primary" style="margin-top: 1rem;">Learn More</a>
+                </div>
+                <div class="zigzag-img-col fade-up delay-1">
+                    <img src="img/Garbhsanskar Activities.jpg" alt="Garbh Sanskar">
+                </div>
+            </div>
+            <!-- Row 2 -->
+            <div class="zigzag-row">
+                <div class="zigzag-text-col fade-up">
+                    <h2>Customized Care</h2>
+                    <p>Our program involves a curated blend of specific diets, soothing music (Garbh Sangeet), yoga, positive thinking, and spiritual chanting designed to create an optimal environment for your baby's growth.</p>
+                </div>
+                <div class="zigzag-img-col fade-up delay-1">
+                    <img src="img/preconception.jpg" alt="Care">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Bento Box Split -->
+    <h2 class="demo-section-title">Concept 4: The 50/50 Split</h2>
+    <section class="layout-split">
+        <div class="split-text">
+            <div class="fade-up">
+                <span class="section-subtitle">Recovery & Healing</span>
+                <h2 style="font-size: 3.5rem; margin-bottom: 1.5rem;">Postnatal Care</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 2rem; color: #555;">
+                    Experience deep rejuvenation after childbirth with our traditional Sootika Paricharya treatments. Designed to restore your body's natural balance and strength.
+                </p>
+                <ul style="margin-bottom: 2.5rem; list-style: none; padding: 0;">
+                    <li style="margin-bottom: 0.8rem;">✓ Authentic Ayurvedic therapies</li>
+                    <li style="margin-bottom: 0.8rem;">✓ Personalized diet plans</li>
+                    <li style="margin-bottom: 0.8rem;">✓ Continuous expert monitoring</li>
+                </ul>
+                <a href="https://forms.gle/6QUog8rSoJxaThwy7" target="_blank" class="btn btn-primary">Book Consultation</a>
+            </div>
+        </div>
+        <div>
+            <img src="img/Postnatal Care.png" alt="Postnatal Care" class="split-img">
+        </div>
+    </section>
+
+    <footer class="footer"></footer>
+    <script src="script.js"></script>
+</body>
+</html>
